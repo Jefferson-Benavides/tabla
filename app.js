@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public'))) ;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views1', 'index.html'));
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.post('/multiplicacion', (req, res) => {
