@@ -1,18 +1,18 @@
-const entradaNumero = document.getElementById('entradaNumero');
+const inputNumero = document.getElementById('inputNumero');
 const botonCalcular = document.getElementById('botonCalcular');
 const botonLimpiar = document.getElementById('botonLimpiar');
 const cuerpoTablaResultado = document.getElementById('cuerpoTablaResultado');
 const contenedorResultado = document.getElementById('contenedorResultado');
 
-entradaNumero.addEventListener('input', () => {
-  const esValido = entradaNumero.checkValidity();
+inputNumero.addEventListener('input', () => {
+  const esValido = inputNumero.checkValidity();
     botonCalcular.disabled = !esValido;
       botonLimpiar.disabled = !esValido;
       });
 
-      document.getElementById('formularioMultiplicacion').addEventListener('submit', (evento) => {
-        evento.preventDefault();
-          const numero = parseInt(entradaNumero.value);
+      document.getElementById('numAMultiplicar').addEventListener('submit', (e) => {
+        e.preventDefault();
+          const numero = parseInt(inputNumero.value);
 
             fetch('/multiplicacion', {
                 method: 'POST',
@@ -21,7 +21,7 @@ entradaNumero.addEventListener('input', () => {
                               },
                                   body: `numero=${numero}`,
                                     })
-                                        .then((respuesta) => respuesta.json())
+                                        .then((res) => res.json())
                                             .then((datos) => {
                                                   cuerpoTablaResultado.innerHTML = '';
                                                         datos.forEach((entrada) => {
@@ -31,7 +31,9 @@ entradaNumero.addEventListener('input', () => {
                                                                                         fila.innerHTML = `
                                                                                                   <td>${a.trim()}</td>
                                                                                                             <td>x</td>
-                                                                                                                      <td>${b.trim()} = ${resultado.trim()}</td>
+                                                                                                                      <td>${b.trim()}</td>
+                                                                                                                      <td>=</td>
+                                                                                                                      <td> ${resultado.trim()}</td>
                                                                                                                               `;
                                                                                                                                       cuerpoTablaResultado.appendChild(fila);
                                                                                                                                             });
@@ -43,7 +45,7 @@ entradaNumero.addEventListener('input', () => {
                                                                                                                                                                     });
 
                                                                                                                                                                     botonLimpiar.addEventListener('click', () => {
-                                                                                                                                                                      entradaNumero.value = '';
+                                                                                                                                                                      inputNumero.value = '';
                                                                                                                                                                         cuerpoTablaResultado.innerHTML = '';
                                                                                                                                                                           contenedorResultado.style.display = 'none';
                                                                                                                                                                           });

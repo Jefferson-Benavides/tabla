@@ -38,3 +38,12 @@ body {
     cursor: not-allowed;
   }
   
+  #cuerpoTablaResultado tr td {
+      border: 1.6px solid gray;
+        border-radius: 4px;
+          padding: 4px;
+          }
+
+          #cuerpoTablaResultado tr td:last-child {
+            font-weight: bold;
+            }
