@@ -1,0 +1,16 @@
+{
+    "name": "tabla",
+    "version": "1.0.0",
+    "description": "App para crear tablas de multiplicar con Node.js y Express",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "author": "benavidesjefferson18@gmail.com ",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.17.1",
+      "body-parser": "^1.19.0"
+    }
+  }
+  
