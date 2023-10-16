@@ -27,7 +27,7 @@ document.getElementById('spinner').style.display;
                                                   cuerpoTablaResultado.innerHTML = '';
                                                         datos.forEach((entrada) => {
                                                                 const fila = document.createElement('tr');
-                                                                        const [a, x, b, e, r] = entrada.split();
+                                                                        const [a, x, b, e, r] = entrada.split(' ');
                                                                                 
                                                                                         fila.innerHTML = `
                                                                                                   <td>${a.trim()}</td>
