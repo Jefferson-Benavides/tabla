@@ -43,6 +43,10 @@ body {
     cursor: not-allowed;
   }
   
+h1, td {
+text-align: center;
+}
+ 
   #cuerpoTablaResultado tr td {
       border: 1.6px solid gray;
         border-radius: 4px;
@@ -62,21 +66,21 @@ body {
             
             .repo svg {
               fill: #2c3e50;
-              transition: fill 0.3s; /* Agrega una transición suave al color de relleno */
+              transition: fill 0.3s; 
             }
             
             .repo svg:hover {
-              fill: none; /* Cambia el relleno a "none" al hacer hover */
+              fill: none; 
             }
             
  @media (min-width: 769px) {
-      body {
+     .app {
           display: flex;
             }
             }
 
        @media (max-width: 768px) {
-              body {
+             .app {
                   display: flex;
                       flex-direction: column;
                         }
