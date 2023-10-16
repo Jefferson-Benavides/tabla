@@ -40,7 +40,7 @@ inputNumero.addEventListener('input', () => {
                                                                                                                                                   contenedorResultado.style.display = 'block';
 
                                                             botonCalcular.disabled = true;
-                                                                                                                                                                          botonLimpiar.disabled = true;                                                                                          })
+                                                                                                                                                                          botonLimpiar.disabled = false;                                                                                          })
                                                                                                                                                           .catch((error) => {
                                                                                                                                                                 console.error(error);
                                                                                                                                                                     });
