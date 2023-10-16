@@ -51,6 +51,7 @@ text-align: center;
       border: 1.6px solid gray;
         border-radius: 4px;
           padding: 4px;
+margin-right: 8px;
           }
 
           #cuerpoTablaResultado tr td:last-child {
@@ -72,6 +73,8 @@ text-align: center;
             .repo svg:hover {
               fill: none; 
             }
+
+
             
  @media (min-width: 769px) {
      .app {
