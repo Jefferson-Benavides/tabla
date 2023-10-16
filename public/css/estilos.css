@@ -9,6 +9,11 @@ body {
     background-color: #f0f0f0;
   }
   
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
   #contenedorResultado {
     display: none;
   }
@@ -47,3 +52,18 @@ body {
           #cuerpoTablaResultado tr td:last-child {
             font-weight: bold;
             }
+
+
+
+ @media (min-width: 769px) {
+      body {
+          display: flex;
+            }
+            }
+
+       @media (max-width: 768px) {
+              body {
+                  display: flex;
+                      flex-direction: column;
+                        }
+                        }      
