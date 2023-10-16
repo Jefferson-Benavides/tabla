@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.post('/multiplicacion', (req, res) => {
   const numero = parseInt(req.body.numero);
 
-  if (isNaN(numero) || numero <= 0 || numero >= 100) {
+  if (isNaN(numero) || numero <= 0 || numero >= 1000) {
     return res.status(400).send('Número inválido');
   }
 
