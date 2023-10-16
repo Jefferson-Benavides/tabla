@@ -22,9 +22,13 @@ document.getElementById('spinner').style.display;
                               },
                                   body: `numero=${numero}`,
                                     })
-                                        .then((res) => res.json())
-                                            .then((datos) => {
-                                                  cuerpoTablaResultado.innerHTML = '';
+                                        .then((res) => res.json());
+const spinnerTimeout = setTimeout(() => {
+    document.getElementById('spinner').style.display = 'none';
+  }, 3000);
+                                           
+ .then((datos) => {
+  clearTimeout(spinnerTimeout);                                                cuerpoTablaResultado.innerHTML = '';
                                                         datos.forEach((entrada) => {
                                                                 const fila = document.createElement('tr');
                                                                         const [a, x, b, e, r] = entrada.split(' ');
@@ -44,7 +48,7 @@ document.getElementById('spinner').style.display;
                                                                                                                                                                           botonLimpiar.disabled = false;   
                                                             document.getElementById('spinner').style.display;                           })
                                                                                                                                                           .catch((error) => {
- document.getElementById('spinner').style.display;                                                                                                                                                               
+ document.getElementById('spinner').style.display = 'none';                                                                                                                                                               
 console.error(error);
                                                                                                                                                                     });
                                                                                                                                                                     });
