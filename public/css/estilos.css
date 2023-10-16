@@ -54,7 +54,21 @@ body {
             }
 
 
-
+            .repo {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            
+            .repo svg {
+              fill: #2c3e50;
+              transition: fill 0.3s; /* Agrega una transición suave al color de relleno */
+            }
+            
+            .repo svg:hover {
+              fill: none; /* Cambia el relleno a "none" al hacer hover */
+            }
+            
  @media (min-width: 769px) {
       body {
           display: flex;

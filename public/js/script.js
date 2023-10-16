@@ -46,6 +46,8 @@ inputNumero.addEventListener('input', () => {
 
                                                                                                                                                                     botonLimpiar.addEventListener('click', () => {
                                                                                                                                                                       inputNumero.value = '';
+                                                                                                                                                                          botonCalcular.disabled = !esValido;
+                                                                                                                                                                          botonLimpiar.disabled = !esValido;
                                                                                                                                                                         cuerpoTablaResultado.innerHTML = '';
                                                                                                                                                                           contenedorResultado.style.display = 'none';
                                                                                                                                                                           });
