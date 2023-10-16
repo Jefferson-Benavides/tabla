@@ -38,7 +38,9 @@ inputNumero.addEventListener('input', () => {
                                                                                                                                       cuerpoTablaResultado.appendChild(fila);
                                                                                                                                             });
                                                                                                                                                   contenedorResultado.style.display = 'block';
-                                                                                                                                                      })
+
+                                                            botonCalcular.disabled = true;
+                                                                                                                                                                          botonLimpiar.disabled = true;                                                                                          })
                                                                                                                                                           .catch((error) => {
                                                                                                                                                                 console.error(error);
                                                                                                                                                                     });
@@ -46,8 +48,8 @@ inputNumero.addEventListener('input', () => {
 
                                                                                                                                                                     botonLimpiar.addEventListener('click', () => {
                                                                                                                                                                       inputNumero.value = '';
-                                                                                                                                                                          botonCalcular.disabled = !esValido;
-                                                                                                                                                                          botonLimpiar.disabled = !esValido;
+                                                                                                                                                                          botonCalcular.disabled = true;
+                                                                                                                                                                          botonLimpiar.disabled = true;
                                                                                                                                                                         cuerpoTablaResultado.innerHTML = '';
                                                                                                                                                                           contenedorResultado.style.display = 'none';
                                                                                                                                                                           });
