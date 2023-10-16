@@ -12,6 +12,7 @@ inputNumero.addEventListener('input', () => {
 
       document.getElementById('numAMultiplicar').addEventListener('submit', (e) => {
         e.preventDefault();
+document.getElementById('spinner').style.display;
           const numero = parseInt(inputNumero.value);
 
             fetch('/multiplicacion', {
@@ -26,23 +27,25 @@ inputNumero.addEventListener('input', () => {
                                                   cuerpoTablaResultado.innerHTML = '';
                                                         datos.forEach((entrada) => {
                                                                 const fila = document.createElement('tr');
-                                                                        const [operandos, resultado] = entrada.split('=');
-                                                                                const [a, b] = operandos.split('x');
+                                                                        const [a, x, b, e, r] = entrada.split();
+                                                                                
                                                                                         fila.innerHTML = `
                                                                                                   <td>${a.trim()}</td>
                                                                                                             <td>x</td>
                                                                                                                       <td>${b.trim()}</td>
                                                                                                                       <td>=</td>
-                                                                                                                      <td> ${resultado.trim()}</td>
+                                                                                                                      <td> ${r.trim()}</td>
                                                                                                                               `;
                                                                                                                                       cuerpoTablaResultado.appendChild(fila);
                                                                                                                                             });
                                                                                                                                                   contenedorResultado.style.display = 'block';
 
                                                             botonCalcular.disabled = true;
-                                                                                                                                                                          botonLimpiar.disabled = false;                                                                                          })
+                                                                                                                                                                          botonLimpiar.disabled = false;   
+                                                            document.getElementById('spinner').style.display;                           })
                                                                                                                                                           .catch((error) => {
-                                                                                                                                                                console.error(error);
+ document.getElementById('spinner').style.display;                                                                                                                                                               
+console.error(error);
                                                                                                                                                                     });
                                                                                                                                                                     });
 
