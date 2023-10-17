@@ -12,7 +12,6 @@ inputNumero.addEventListener('input', () => {
 
       document.getElementById('numAMultiplicar').addEventListener('submit', (e) => {
         e.preventDefault();
-document.getElementById('spinner').style.display = 'block';
           const numero = parseInt(inputNumero.value);
 
             fetch('/multiplicacion', {
@@ -23,12 +22,9 @@ document.getElementById('spinner').style.display = 'block';
                                   body: `numero=${numero}`,
                                     })
                                         .then((res) => res.json());
-const spinnerTimeout = setTimeout(() => {
-    document.getElementById('spinner').style.display = 'none';
-  }, 3000);
                                            
- .then((datos) => {
-  clearTimeout(spinnerTimeout);                                                cuerpoTablaResultado.innerHTML = '';
+ .then((datos) =>{
+                                              cuerpoTablaResultado.innerHTML = '';
                                                         datos.forEach((entrada) => {
                                                                 const fila = document.createElement('tr');
                                                                         const [a, x, b, e, r] = entrada.split(' ');
@@ -48,7 +44,7 @@ const spinnerTimeout = setTimeout(() => {
                                                                                                                                                                           botonLimpiar.disabled = false;   
                                                                                      })
                                                                                                                                                           .catch((error) => {
- document.getElementById('spinner').style.display = 'none';                                                                                                                                                               
+                                                                                                                                                                
 console.error(error);
                                                                                                                                                                     });
                                                                                                                                                                     });
