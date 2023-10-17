@@ -12,7 +12,7 @@ inputNumero.addEventListener('input', () => {
 
       document.getElementById('numAMultiplicar').addEventListener('submit', (e) => {
         e.preventDefault();
-document.getElementById('spinner').style.display;
+document.getElementById('spinner').style.display = 'block';
           const numero = parseInt(inputNumero.value);
 
             fetch('/multiplicacion', {
@@ -46,7 +46,7 @@ const spinnerTimeout = setTimeout(() => {
 
                                                             botonCalcular.disabled = true;
                                                                                                                                                                           botonLimpiar.disabled = false;   
-                                                            document.getElementById('spinner').style.display;                           })
+                                                                                     })
                                                                                                                                                           .catch((error) => {
  document.getElementById('spinner').style.display = 'none';                                                                                                                                                               
 console.error(error);
